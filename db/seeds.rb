@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+75.times do
+  flat = Flat.new(
+    name: Faker::TvShows::SouthPark.episode_name,
+    address: Faker::Address.full_address,
+    description: Faker::TvShows::Simpsons.quote,
+    price_per_night: Faker::Number.between(from: 30, to: 150000),
+    number_of_guests: Faker::Number.within(range: 1..16),
+    smoking: Faker::Boolean.boolean(true_ratio: 0.4)
+  )
+  flat.save
+end

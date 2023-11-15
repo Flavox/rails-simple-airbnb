@@ -1,0 +1,25 @@
+<h1>CloneBnB</h1>
+<div class='container'>
+<h2>Tous nos Flats 😎 (<%= @flats.length %>)</h2>
+  <div class='row row-cols-4 gap-3'>
+    <% @flats.each do |flat| %>
+      <div id='card' class='col card p-0'>
+        <div id='background-grey' class='card-body d-flex flex-column'>
+          <h4><%= flat.name %></h3>
+          <p><%= flat.address %></p>
+          <div class="d-flex gap-4 mt-auto">
+            <div>
+              <%= flat.number_of_guests %> <i class="fa-solid fa-people-group" style="color: #008000;"></i>
+            </div>
+            <div>
+              <%= flat.price_per_night %> <i class="fa-solid fa-euro-sign" style="color: #008000;"></i>
+            </div>
+          </div>
+        </div>
+        <div id='fixeandgray' class="text-primary d-flex align-items-center ps-3">
+          <p class='card-text'>Plus d'info !</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+  background-color: #F8F9FA;
+}
+
+#card {
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
+}
+
+#background-grey {
+  background-color: #F8F9FA;
+}
+
+#fixeandgray {
+  height: 50px;
+  font-weight: 500;
+}
